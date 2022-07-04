@@ -1,5 +1,3 @@
-// Use Recursion to Create a Countdown
-
 // In a previous challenge, you learned how to use recursion to replace a for
 // loop. Now, let's look at a more complex function that returns an array of
 // consecutive integers starting with 1 through the number passed to the
@@ -19,13 +17,13 @@
 // the function as follows:
 
 function countup(n) {
-  if (n < 1) {
-    return [];
-  } else {
-    const countArray = countup(n - 1);
-    countArray.push(n);
-    return countArray;
-  }
+    if (n < 1) {
+        return [];
+    } else {
+        const countArray = countup(n - 1);
+        countArray.push(n);
+        return countArray;
+    }
 }
 console.log(countup(5));
 
@@ -48,16 +46,16 @@ console.log(countup(5));
 
 
 function countdown(n) {
-  if ( n < 1 ){
-      return [];
-  } else {
-      const countArray = countdown(n - 1);
-      // Value n is added to beginning of the array last, after the rescursive
-      // call has returned. At the point where n is added to the beginning of
-      // the array, countdown(n - 1) has already been evaluated and returned
-      // [n - 1, ..., 2, 1].
-      countArray.unshift(n);
-      return countArray;
-  }
+    if ( n < 1 ){
+        return [];
+    } else {
+        const countArray = countdown(n - 1);
+        // Value n is added to beginning of the array last, after the rescursive
+        // call has returned. At the point where n is added to the beginning of
+        // the array, countdown(n - 1) has already been evaluated and returned
+        // [n - 1, ..., 2, 1].
+        countArray.unshift(n);
+        return countArray;
+    }
 }
 

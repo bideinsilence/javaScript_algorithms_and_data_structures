@@ -23,8 +23,7 @@ let todaysWeather = weatherConditions.slice(1, 3);
 
 function forecast(arr) {
     // Only change code below this line
-    const newArr = arr.slice(2, 4);
-    return newArr;
+    return arr.slice(2, 4);
 }
 
 // Only change code above this line

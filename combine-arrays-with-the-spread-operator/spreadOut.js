@@ -20,8 +20,8 @@ let thatArray = ['basil', 'cilantro', ...thisArray, 'coriander'];
 
 
 function spreadOut() {
-    let fragment = ['to', 'code'];
-    let sentence = ['learning', ...fragment, 'is', 'fun']; // Change this line
+    const fragment = ['to', 'code'];
+    const sentence = ['learning', ...fragment, 'is', 'fun']; // Change this line
     return sentence;
 }
 

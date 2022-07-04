@@ -3,26 +3,26 @@
 // multiply the first n elements of an array to create the product of those
 // elements. Using a for loop, you could do this:
 // 
-//     function multiply(arr, n) { 
-//         let product = 1;
-//         for (let i = 0; i < n; i++) {
-//             product *= arr[i];
-//         }
-//         return product;
-//     }
+     function multiply(arr, n) { 
+         let product = 1;
+         for (let i = 0; i < n; i++) {
+             product *= arr[i];
+         }
+         return product;
+     }
 // 
 // However, notice that multiply(arr,n) === multiply(arr, n - 1) * arr[n - 1].
 // That means you can rewrite multiply() in terms of itself and never need to use
 // a loop.
-// 
-//     function multiply(arr, n) {
-//         if (n <= 0) {
-//             return 1;
-//         } else {
-//             return multiply(arr, n - 1) * arr[n - 1];
-//         }
-//     }
-// 
+ 
+     function multiply(arr, n) {
+         if (n <= 0) {
+             return 1;
+         } else {
+             return multiply(arr, n - 1) * arr[n - 1];
+         }
+     }
+ 
 // The recursive version of multiply() breaks down like this. In the base case,
 // where n <= 0, it returns 1. For larger values of n, it calls itself, but
 // with n - 1. That function call is evaluated in the same way, calling multiply()
