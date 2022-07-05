@@ -23,9 +23,9 @@ Array.prototype.myMap = function(callback) {
     for (let i = 0; i < this.length; i++) {
         newArray[i] = callback(this[i]);
     }
-    // Or
-    //this.forEach(element =>
-    //    newArray.push(callback(element))
+    // Or:
+    //this.forEach((element, index) =>
+    //    newArray[index] = (callback(element))
     //)
     // Only change code above this line
     return newArray;
