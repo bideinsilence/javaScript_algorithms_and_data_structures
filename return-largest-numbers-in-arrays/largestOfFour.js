@@ -9,20 +9,24 @@
 // I actually made it return an array with the largest number from each provided
 // sub-array without limiting it to 4 sub-arrays.
 function largestOfFour(arr) {
+    // New array to return
     const newArray = [];
-    let largestNumber;
+    // Loop through each sub-array index i of argument array
     for (let i = 0; i < arr.length; i++) {
-        // Set the first number in a sub array as the base largest number for
-        // that array
+        // Set the first number in a sub-array index i as the initial largest
+        // number for that array
         // Works with arrays of numbers that are all less than 0
-        largestNumber = arr[i][0];
+        let largestNumber = arr[i][0];
+        // Loop through each number at index j in sub-array index i
         for (let j = 0; j < arr[i].length; j++) {
+            // Assign largestNumber as number at index j if larger than current
+            // value
             if ( arr[i][j] > largestNumber ) {
                 largestNumber = arr[i][j];
             }
         }
-        newArray.push(largestNumber)
-        largestNumber = 0;
+        // Add number to new array
+        newArray.push(largestNumber);
     }
     return newArray;
 }
