@@ -57,7 +57,13 @@ function sumAll(arr) {
     //
     //// Recursive solution using destructering assignment, the spread operator,
     //// sort(), and the ternary operator:
+    //// Sort the array from smallest to largest, sort(), and assign the smaller
+    //// number as first and the larger number as last
     //const [first, last] = [...arr].sort((a, b) => a - b);
+    //// If the value of first number does not equal the last, return the first
+    //// value added to another call of the equation passing an array of
+    //// [first + 1, last] as the argument; if the values are equal return only
+    //// the first value
     //return first !== last
     //    ? first + sumAll([first + 1, last])
     //    : first;
