@@ -54,6 +54,13 @@ function sumAll(arr) {
     //const numberOfIntegers = Math.abs(lastNumber - firstNumber) + 1;
     //// Return the summation formula
     //return (firstNumber + lastNumber) * (numberOfIntegers / 2);
+    //
+    //// Recursive solution using destructering assignment, the spread operator,
+    //// sort(), and the ternary operator:
+    //const [first, last] = [...arr].sort((a, b) => a - b);
+    //return first !== last
+    //    ? first + sumAll([first + 1, last])
+    //    : first;
 }
 
 sumAll([1, 4]);
