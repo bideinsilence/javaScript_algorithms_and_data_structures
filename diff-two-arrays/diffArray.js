@@ -6,6 +6,27 @@
 
 
 function diffArray(arr1, arr2) {
+    //// With a for loop and indexOf():
+    //// New array to return
+    //const newArray = [];
+
+    //function onlyFound(first, second) {
+    //    // For each index in the first array
+    //    for (let i = 0; i < first.length; i++) {
+    //        // indexOf() will return -1 if the elment at index i in the first array, first[i], isn't found in the second array
+    //        if ( second.indexOf(first[i]) === -1 ) {
+    //            // Add the unique element to the new array
+    //            newArray.push(first[i]);
+    //        }
+    //    }
+    //}
+
+    //// Find all elements only found in one the two given arrays and add them to the new array
+    //onlyFound(arr1, arr2);
+    //onlyFound(arr2, arr1);
+
+    //return newArray;
+    //
     // Clean solution with filter() and includes():
     // New Array to return
     return arr1
