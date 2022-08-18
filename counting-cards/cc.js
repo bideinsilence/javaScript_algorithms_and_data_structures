@@ -32,6 +32,7 @@ let count = 0;
 
 function cc(card) {
     // Only change code below this line
+    // With a switch statement:
     // Return a string with current count and Bet or Hold
     function betOrHold() {
         if ( count > 0 ) {
@@ -63,6 +64,32 @@ function cc(card) {
             count--;
             return betOrHold();
     }
+    //
+    //// With if, else if, and the || (or), operator:
+    //// Return a string with current count and Bet or Hold
+    //function betOrHold() {
+    //    if ( count > 0 ) {
+    //        return `${ count } Bet`;
+    //    } else {
+    //        return `${ count } Hold`;
+    //    }
+    //}
+    //// Increment or decrement count according to the value of card and return a call to betOrHold()
+    //if ( card === 2 ||
+    //    card === 3 ||
+    //    card === 4 ||
+    //    card === 5 ||
+    //    card === 6 ) {
+    //    count++;
+    //    return betOrHold();
+    //} else if (card === 7 ||
+    //    card === 8 ||
+    //    card === 9) {
+    //    return betOrHold();
+    //} else {
+    //    count--;
+    //    return betOrHold();
+    //}
     // Only change code above this line
 }
 
