@@ -34,6 +34,15 @@ function diffArray(arr1, arr2) {
         .filter(element => !arr2.includes(element))
         // Add, concat(), to the returned array an array of items, filter(), from the second array that are not included in the first array, includes()
         .concat(arr2.filter(element => !arr1.includes(element)))
+    //
+    //// Previous solution with || (or):
+    //// Return a combined array, concat()
+    //return arr1.concat(arr2).filter(element =>
+    //    // With elements found in only one of the uncombined arrays
+    //    // If not found, !includes(), in either array == not in both
+    //    !arr1.includes(element) ||
+    //    !arr2.includes(element)
+    );
 }
 
 diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
