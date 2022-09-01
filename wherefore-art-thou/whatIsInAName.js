@@ -11,6 +11,7 @@
 // its value, that was passed on as the second argument.
 
 function whatIsInAName(collection, source) {
+    // Original solution:
     // New array to return
     const arr = [];
     // Only change code below this line
@@ -26,7 +27,25 @@ function whatIsInAName(collection, source) {
     // Use spread syntax to copy, push(), the remaining elements (objects) into
     // the new array
     arr.push(...filtered);
-  // Only change code above this line
+    // Only change code above this line
+    return arr;
+    //
+    // New array to return
+    const arr = [];
+    // Only change code below this line
+    const sourceKeys = Object.keys(source);
+
+    const filtered = collection.filter(obj => {
+        for (let i = 0; i < sourceKeys.length; i++) {
+            if (!obj.hasOwnProperty(sourceKeys[i]) ||
+                obj[sourceKeys[i]] !== source[sourceKeys[i]]) {
+                    return false;
+            }
+        }
+        return true;
+    });
+    arr.push(...filtered);
+    // Only change code above this line
     return arr;
 }
 
