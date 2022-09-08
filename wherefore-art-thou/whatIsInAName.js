@@ -30,23 +30,31 @@ function whatIsInAName(collection, source) {
     // Only change code above this line
     return arr;
     //
-    // New array to return
-    const arr = [];
-    // Only change code below this line
-    const sourceKeys = Object.keys(source);
-
-    const filtered = collection.filter(obj => {
-        for (let i = 0; i < sourceKeys.length; i++) {
-            if (!obj.hasOwnProperty(sourceKeys[i]) ||
-                obj[sourceKeys[i]] !== source[sourceKeys[i]]) {
-                    return false;
-            }
-        }
-        return true;
-    });
-    arr.push(...filtered);
-    // Only change code above this line
-    return arr;
+    //// With a for loop and filtering by objects without the same name or values:
+    //// New array to return
+    //const arr = [];
+    //// Only change code below this line
+    //// Get keys of source object
+    //const sourceKeys = Object.keys(source);
+    //// Filter the collection array of objects
+    //const filtered = collection.filter(obj => {
+    //    // For each source key
+    //    for (let i = 0; i < sourceKeys.length; i++) {
+    //        // Return false for objects that don't have the same name or that
+    //        // don't have the same value for the same name
+    //        if (!obj.hasOwnProperty(sourceKeys[i]) ||
+    //            obj[sourceKeys[i]] !== source[sourceKeys[i]]) {
+    //                return false;
+    //        }
+    //    }
+    //    // Return true for objects that have the same name and value pairs
+    //    return true;
+    //});
+    //// Use spread syntax to copy, push(), the remaining elements (objects) into
+    //// the new array
+    //arr.push(...filtered);
+    //// Only change code above this line
+    //return arr;
 }
 
 whatIsInAName(
