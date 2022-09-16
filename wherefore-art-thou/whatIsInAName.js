@@ -55,6 +55,26 @@ function whatIsInAName(collection, source) {
     //arr.push(...filtered);
     //// Only change code above this line
     //return arr;
+    //
+    //// With filter(), map(), and reduce():
+    //// New array to return
+    //const arr = [];
+    //// Only change code below this line
+    //// Get keys of source object
+    //const sourceKeys = Object.keys(source);
+    //// Filter the collection array of objects for each object that has matching name and value pairs with the source object. Each name and value pair of the source object has to be present.
+    //const filtered = collection.filter(obj =>
+    //    sourceKeys
+    //        // Return true for any collection object with a matching name and value pair present in the source object, false otherwise
+    //        .map(key => obj.hasOwnProperty(key) && obj[key] === source[key])
+    //        // Return true if each name and value pair of the source object is present in the collection object
+    //        .reduce((previousValue, currentValue) => previousValue && currentValue)
+    //);
+    //// Use spread syntax to copy, push(), the remaining elements (objects) into
+    //// the new array
+    //arr.push(...filtered);
+    //// Only change code above this line
+    //return arr;
 }
 
 whatIsInAName(
